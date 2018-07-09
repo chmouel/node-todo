@@ -51,10 +51,6 @@ app.use(methodOverride('X-HTTP-Method-Override')); // override with the X-HTTP-M
 // routes ======================================================================
 require('./app/routes.js')(app);
 
-initDb(function(err){
-  console.log('Error connecting to Mongo. Message:\n'+err);
-});
-
 // listen (start app with node server.js) ======================================
 app.listen(port);
 console.log("App listening on port " + port);
